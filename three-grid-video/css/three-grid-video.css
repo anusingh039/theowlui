@@ -1,0 +1,228 @@
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .perx-5{
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: rgb(33 37 41 / 0%) !important;
+}
+
+.nav-link{
+    
+    border-radius: 50px;
+    padding: 4px 40px !important;
+    
+    border: solid 1px #ffffff8c; 
+    margin-right: 15px;
+}
+
+.nav-link.active{
+    backdrop-filter: blur(6px);
+   background: #ffffff1c;
+    
+   
+}
+
+.grid-column {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.grid-column video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; /* Stretch across all columns */
+    height: 100%;
+    object-fit: cover;
+}
+.video-content-left{
+     position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+}
+
+.video-content-right{
+    position: absolute;
+   bottom: 0;
+   
+   width: 100%;
+   text-align: right;
+    padding: 20px;
+}
+
+
+.video-content-left p{
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1;
+    text-shadow: 2px 2px 8px #000000;
+}
+.video-content-left .go-to-next{
+    border: solid 1px #fff;
+    font-size: 14px;
+    padding: 14px 8%;
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    margin-top: 9px;
+    position: absolute;
+    margin-left: 15px;
+}
+.col-md-4:nth-child(1) video {
+    left: 0; /* Align video for the left column */
+}
+
+.col-md-4:nth-child(2) video {
+    left: -100%; /* Center the video for the middle column */
+}
+
+.col-md-4:nth-child(3) video {
+    left: -200%; /* Align video for the right column */
+}
+
+.ring-text {
+    fill: currentColor;
+    height: auto;
+    max-width: 32vmin;
+    transform-origin: center;
+    width: 32%;
+    color: #ababab;
+    font-weight: 300;
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    padding: 8px;
+    background: #ffffff1c;
+    border: solid 1px #ffffff21;
+    animation: ringtext 15s linear infinite;
+}
+
+@keyframes ringtext {
+    0% {
+      transform: rotate(0deg)
+    }
+    
+    100% {
+      transform: rotate(360deg)
+    }
+  }
+
+  /* midsection */
+
+  
+  .social-circle {
+    position: absolute;
+    width: 85%;
+    height: 60px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Main button */
+  .main-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    /* background-color: #007bff; */
+    color: white;
+    font-size: 24px;
+    
+    text-align: center;
+    border-radius: 50%;
+    border:solid 1px #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Main button hover effect */
+  .main-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Icon list container */
+  .icon-list {
+    position: absolute;
+    bottom: 50%; /* Start the icons above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none; /* Prevent interaction until hover */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Icon styling */
+  .icon {
+    width: 40px;
+    height: 40px;
+    /* background-color: #6c757d; */
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom:15px
+  }
+
+  .icon img{
+    width:100%;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Hover effect on social circle */
+  .social-circle:hover .icon-list {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Show icons one by one moving upwards */
+  .social-circle:hover .icon:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+  }
+  
+  .social-circle:hover .icon:nth-child(2) {
+    opacity: 1;
+    transform: translateY(-10px);
+    transition-delay: 0.2s;
+  }
+  
+  .social-circle:hover .icon:nth-child(3) {
+    opacity: 1;
+    transform: translateY(-20px);
+    transition-delay: 0.3s;
+  }
+  
+  .social-circle:hover .icon:nth-child(4) {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition-delay: 0.4s;
+  }
+  
+  .social-circle:hover .icon:nth-child(5) {
+    opacity: 1;
+    transform: translateY(-40px);
+    transition-delay: 0.5s;
+  }
+  
